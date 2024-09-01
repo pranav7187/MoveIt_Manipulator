@@ -1,0 +1,12 @@
+<launch>
+    <include file="$(find arduinobot_description)/launch/gazebo.launch"/>
+    <include file="$(find arduinobot_controller)/launch/controller.launch">
+        <arg name="is_sim" value="True"/>
+
+    </include>
+   
+    <include file="$(find arduinobot_moveit)/launch/move_group.launch"/>
+    <include file="$(find arduinobot_moveit)/launch/moveit_rviz.launch"/>
+
+    
+</launch>
